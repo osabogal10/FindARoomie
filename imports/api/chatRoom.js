@@ -10,6 +10,10 @@ if(Meteor.isServer){
   });
 }
 
+ /* Para eliminar huecos de seguridad, deberían hacer verificaciones sobre los parámetros que entran y van a usarse en los métodos
+que modifican la base de datos, en este caso específico usar por ejemplo: "check(usersrc, Object);", dependiendo de lo que se espere 
+(yo asumí que usersrc es un objeto) */
+
 Meteor.methods({
   'chatrooms.createRoom': function(usersrc,userdst){
     /* let idChat = ChatRooms.upsert(
