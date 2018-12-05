@@ -8,7 +8,9 @@ if (Meteor.isServer) {
     return Meteor.users.find({});
   });
 }
-  
+   /* Consejo: Tener funciones que verifiquen los casos de error en los métodos, ¿qué pasa si el usuario ya existe con un determinado correo?, 
+   si el usuario buscado no exite?, y aplicado en general a las reglas de negocio*/
+
 Meteor.methods({
   'users.add':function(user){
     let userID = Meteor.users.insert({
