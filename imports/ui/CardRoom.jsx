@@ -17,19 +17,23 @@ class CardRoom extends Component {
     return (
 
       <div>
-        <Card className='card'>
-          <CardHeader
-            title={this.props.room.titulo}
-            subheader={`Precio: $${this.props.room.precio}`}
-          />
-          <CardMedia 
-            className='media'
-            image={'/images/defaultRoom.jpg'}
-          />
-          <CardActions className='actions'>
+<!--Fue cero intuitivo para mi tener que darle un clik al botón de ver habitación para ir al detalle,
+ les recomiendo encerrar todo en un <a></a> para que sea mucho más accesible-->
+         <a href={`viewrooms/${this.props.room._id}`}>
+          <Card className='card'>
+            <CardHeader
+              title={this.props.room.titulo}
+              subheader={`Precio: $${this.props.room.precio}`}
+            />
+            <CardMedia 
+              className='media'
+              image={'/images/defaultRoom.jpg'}
+            />
+<!--           <CardActions className='actions'>
             <Button href={`viewrooms/${this.props.room._id}`}>Ver Habitación</Button>
-          </CardActions>
+          </CardActions> -->
         </Card>
+        </a>
       </div>
     );
   }
