@@ -16,6 +16,10 @@ if(Meteor.isServer){
   });
 }
 
+ /* Para eliminar huecos de seguridad, deberían hacer verificaciones sobre los parámetros que entran y van a usarse en los métodos
+que modifican la base de datos, en este caso específico usar por ejemplo: "check(room, Object);", de hecho deberían verificar cada parámetro 
+o sea, como  "check(titulo, String);", "check(tamano, Number);", etc. */
+
 Meteor.methods({
   'rooms.addRoom':function(room){
     
