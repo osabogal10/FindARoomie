@@ -20,7 +20,11 @@ Meteor.methods({
 
       try
       {
-          Messages.insert({id: Meteor.userId()},{
+        // CODE REVIEW  - Ricardo Andres Angel Villadiego
+        // Insert solo recibe un documento a insertar y un callback como argumento
+        // Mongo genera los _id automaticamente no es necesarario tneer msgID
+        // user1ID y user1Name pueden llega rpor parametro desde el cliente
+          Messages.insert({id: Meteor.userId()},{    
             msgID: ""+Messages.find({}).count+1,
             user1ID: "", //El dueño de la sala -> El que tiene la habitacion
             user1Name: "", 

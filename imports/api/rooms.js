@@ -41,6 +41,10 @@ Meteor.methods({
   },
   'rooms.getRoom':function(id){
     //console.log('fetching',id);
+    
+    //CODE REVIEW - Ricardo Andres Angel Villadiego
+    // puede usarse findOne en vez de find
+    // en el if el condicional puede ser solamnete if(!room)
     let room = Rooms.find({_id:id}).fetch();
     //console.log(room);
     if(typeof room != 'undefined'){

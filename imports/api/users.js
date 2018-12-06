@@ -53,6 +53,8 @@ Meteor.methods({
     Meteor.users.update(user[0].userID, profileTW = profileTWP);
     return user;
   },
+  //CODE REVIEW - Ricardo Andres Angel Villadiego
+  // el if(Meteor.isServer) sobra ya que los metodos siempre estan en el servidor
   'users.findByUsername'(username) {
     if (Meteor.isServer){
       //console.log('me llego',username);
