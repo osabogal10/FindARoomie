@@ -1,4 +1,6 @@
 # FindARoomie
+![Find A Roomie](https://raw.githubusercontent.com/osabogal10/FindARoomie/master/public/images/findaroomie2.gif)
+
 ## Description
 This project is helps you to find the best roomie to live with in the place you love.
 
